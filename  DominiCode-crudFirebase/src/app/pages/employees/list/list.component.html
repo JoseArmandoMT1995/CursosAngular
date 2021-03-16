@@ -1,0 +1,25 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Inicio</th>
+        <th scope="col" class="d-none d-sm-block">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor="let item of [0,1,2,3,4]">
+        <th scope="row">Jose Armando</th>
+        <td>mtjamx95@gmail.com</td>
+        <td>Column content</td>
+        <td class="btn-group d-none d-sm-block" roule="group">
+          <button type="button" class="btn btn-warning mr-2"  (click)="mandarEditar(item)"   >Primary</button>
+          <button type="button" class="btn btn-warning mr-2"  (click)="mandarVer(item)"      >Secondary</button>
+          <button type="button" class="btn btn-danger"        (click)="mandarEliminar(item)" >Success</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
