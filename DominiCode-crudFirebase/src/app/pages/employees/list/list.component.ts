@@ -22,6 +22,7 @@ export class ListComponent implements OnInit {
     this.navigationExtras.state.value= item;
     this.router.navigate(['edit'],this.navigationExtras);
   }
+  
   mandarVer(item: any):void{
     this.navigationExtras.state.value= item;
     this.router.navigate(['details'],this.navigationExtras);

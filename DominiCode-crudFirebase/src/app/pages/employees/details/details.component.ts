@@ -7,14 +7,32 @@ import { Router,NavigationExtras } from '@angular/router';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  value =null;
+  navigationExtras:NavigationExtras={
+    state:{
+      value:null
+    }
+  };
+  employee =null;
   constructor(private router: Router) { 
 
     const navegation = this.router.getCurrentNavigation();
-    this.value= navegation?.extras?.state;
+    this.employee= navegation?.extras?.state;
   }
 
   ngOnInit(): void {
+  }
+  mandarEditar():void{
+    this.navigationExtras.state.value= this.employee;
+    this.router.navigate(['edit'],this.navigationExtras);
+  }
+
+
+  retornoLista():void{
+    this.router.navigate(['list']);
+  }
+  mandarEliminar():void{
+    
+    alert("mensaje Eliminado");
   }
 
 }

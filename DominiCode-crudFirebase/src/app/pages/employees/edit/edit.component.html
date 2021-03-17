@@ -1,2 +1,19 @@
-<p>edit works!</p>
-{{ value | json }}
+<form action="" class="mt-5 col-md-8 offset-md-2" (ngSubmit)="save()" [formGroup]="employeeForm">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="nombre" formControlName="name">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="last name" formControlName="lastname">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="email" formControlName="email">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="start date 23/02/1995" formControlName="startDate">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-block bg-dark text-ligth mb-5">save</button>
+</form>
