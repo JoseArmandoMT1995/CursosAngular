@@ -12,6 +12,20 @@ export class ListComponent implements OnInit {
       value:null
     }
   };
+  fakeData=[
+    {
+      name:"jose",
+      lastName:"moreno",
+      email:"mtjamx95@gmail.com",
+      startDate:"23/02/1995"
+    },
+    {
+      name:"armando",
+      lastName:"moreno",
+      email:"mtjamx95@gmail.com",
+      startDate:"23/02/1995"
+    }
+  ];
   constructor(
     private router: Router
   ) { }

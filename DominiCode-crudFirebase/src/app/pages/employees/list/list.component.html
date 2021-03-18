@@ -9,14 +9,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="table-active" *ngFor="let item of [0,1,2,3,4]">
-        <th scope="row">Jose Armando</th>
-        <td>mtjamx95@gmail.com</td>
-        <td>Column content</td>
+      <tr class="table-active" *ngFor="let item of fakeData">
+        <th scope="row">{{item.name }} {{item.lastName}}</th>
+        <td>{{item.email}}</td>
+        <td>{{item.startDate}}</td>
         <td class="btn-group d-none d-sm-block" roule="group">
-          <button type="button" class="btn btn-warning mr-2"  (click)="mandarEditar(item)"   >Primary</button>
-          <button type="button" class="btn btn-warning mr-2"  (click)="mandarVer(item)"      >Secondary</button>
-          <button type="button" class="btn btn-danger"        (click)="mandarEliminar(item)" >Success</button>
+          <button type="button" class="btn btn-warning mr-2"  (click)="mandarEditar(item)"   >Editado</button>
+          <button type="button" class="btn btn-warning mr-2"  (click)="mandarVer(item)"      >Detalle</button>
+          <button type="button" class="btn btn-danger"        (click)="mandarEliminar(item)" >Eliminar</button>
         </td>
       </tr>
 

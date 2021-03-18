@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { HeaderModule } from './shared/components/header/header.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { FooterModule } from './shared/components/footer/footer.module';
+import { EmployeeFormModule } from './shared/components/employee-form/employee-form.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterModule } from './shared/components/footer/footer.module';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    EmployeeFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
